@@ -1,0 +1,44 @@
+.sh__header {
+  background-color: var(--primary);
+}
+
+.sh__header a {
+  color: var(--white);
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sh__header a:hover {
+  opacity: 0.7;
+}
+
+.sh__header-inner_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.sh__header-inner_content-brand a {
+  padding: 0px 20px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.sh__header-inner_content-nav_links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.sh__header-inner_content-nav_links li {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.sh__header-inner_content-nav_links li:last-child {
+  margin-right: 0;
+}

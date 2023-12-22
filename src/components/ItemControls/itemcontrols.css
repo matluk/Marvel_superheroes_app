@@ -1,0 +1,32 @@
+.sh__inner_card_controls {
+  display: inline;
+  background-color: black;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.829);
+  border-radius: 5px;
+  padding: 3px;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.sh__item_card:hover .sh__inner_card_controls {
+  opacity: 1;
+}
+
+.sh__inner_card_controls-ctrl_btn {
+  color: #fefefe;
+  background-color: transparent;
+  border: none;
+  transition: all 0.4s ease;
+  font-size: 1.25rem;
+  padding: 5px;
+  margin: 0;
+}
+
+.sh__inner_card_controls-ctrl_btn:hover {
+  color: var(--secondary);
+  cursor: pointer;
+}

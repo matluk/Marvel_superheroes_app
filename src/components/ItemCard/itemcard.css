@@ -1,0 +1,33 @@
+.sh__item_card {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  border: 0;
+  display: block;
+
+  border: 2px solid transparent;
+  background: transparent;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.sh__item_card img {
+  width: 100%;
+  display: block;
+}
+
+.sh__item_content {
+  position: relative;
+}
+
+.sh__item_card:hover {
+  border: 3px solid var(--secondary);
+  pointer-events: auto;
+}
+
+.sh__item_card img {
+  width: 100%;
+  display: block;
+  cursor: pointer; /* Add this line to set the cursor style */
+}
