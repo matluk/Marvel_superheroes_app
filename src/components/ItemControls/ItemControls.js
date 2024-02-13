@@ -1,22 +1,27 @@
-import React, {useContext} from 'react';
-import { GlobalContext } from '../../context/GlobalState';
-import './itemcontrols.css'
+import React from "react";
+import { useDispatch } from "react-redux";
+import { removeItemFromFavorites } from "../../redux/favoritesSlice";
+import "./itemcontrols.css";
 
-export const ItemControls = ({item, type}) => {
+export const ItemControls = ({ item, type }) => {
+  const dispatch = useDispatch();
 
-  const {removeItemFromFavorites } = useContext(GlobalContext);
+  const handleRemoveFromFavorites = () => {
+    dispatch(removeItemFromFavorites(item.id));
+  };
 
   return (
-    <div className='sh__inner_card_controls'>
-        {type === 'favorites' && (
-            <>
-            <button className='sh__inner_card_controls-ctrl_btn'
-            onClick={() => removeItemFromFavorites(item.id)}>
-             Remove from favorites
-            </button>
-            </>
-        )}
-
+    <div className="sh__inner_card_controls">
+      {type === "favorites" && (
+        <>
+          <button
+            className="sh__inner_card_controls-ctrl_btn"
+            onClick={handleRemoveFromFavorites}
+          >
+            Remove from favorites
+          </button>
+        </>
+      )}
     </div>
-  )
-}
+  );
+};

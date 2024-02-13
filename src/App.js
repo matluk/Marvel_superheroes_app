@@ -5,12 +5,10 @@ import { Header } from "./components/Header/Header";
 import "./App.css";
 
 import { Add } from "./components/Add/Add";
-import { GlobalProvider } from "./context/GlobalState";
 import { Favorites } from "./components/Favorites/Favorites";
 
 function App() {
   return (
-    <GlobalProvider>
       <Router>
         <Header />
         <Routes>
@@ -18,7 +16,6 @@ function App() {
           <Route path="/add" element={<Add />} />
         </Routes>
       </Router>
-    </GlobalProvider>
   );
 }
 
